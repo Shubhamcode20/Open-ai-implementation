@@ -13,8 +13,13 @@ from llama_index.core import (
 )
 import os.path
 
+from dotenv import load_dotenv
 
-os.environ['OPENAI_API_KEY'] = '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'
+# Load environment variables from .env file
+load_dotenv()
+
+
+os.environ['OPENAI_API_KEY'] = os.getenv('OPEN_AI_KEY')
 
 # Page configuration
 st.set_page_config(
