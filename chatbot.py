@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-os.environ['OPENAI_API_KEY'] = os.getenv('OPEN_AI_KEY')
+os.environ['OPENAI_API_KEY'] = st.secrets["OPEN_AI_API_KEY"]
 
 # Page configuration
 st.set_page_config(
