@@ -37,7 +37,7 @@ PERSIST_DIR = "./storage"
 def initialize_index():
     """Initialize or load the LlamaIndex index"""
     if not os.path.exists(PERSIST_DIR):
-        documents = SimpleDirectoryReader("/doc").load_data()
+        documents = SimpleDirectoryReader("./doc").load_data()
         node_parser = SentenceSplitter(chunk_size=1000, chunk_overlap=50)
         nodes = node_parser.get_nodes_from_documents(documents, show_progress=True)
         
