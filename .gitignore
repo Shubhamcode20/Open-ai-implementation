@@ -3,3 +3,4 @@
 \storage
 \main.py
 \.env
+.streamlit/secrets.toml
